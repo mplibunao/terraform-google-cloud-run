@@ -166,6 +166,8 @@ resource "google_cloud_run_service" "main" {
       metadata[0].annotations["run.googleapis.com/client-name"],
       metadata[0].annotations["run.googleapis.com/client-version"],
       metadata[0].annotations["client.knative.dev/user-image"],
+      metadata[0].annotations["serving.knative.dev/creator"],
+      metadata[0].annotations["serving.knative.dev/lastModifier"],
       traffic
     ]
   }
